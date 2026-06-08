@@ -21,6 +21,7 @@ def rank_currencies(currency_list):
 def print_rankings(currency_list):
 	ranked = rank_currencies(currency_list) # We call the function like this.
 	for index, score in enumerate(ranked, 1):
-		print(score) # bug here, printing the object itself instead of calling display() on it
+		print(f'{index}.')
+		score.display()
 
 print_rankings(currency_list)
