@@ -1,0 +1,29 @@
+class Currency():
+	def __init__(self, name, score):
+		self.name = name
+		self.score = score
+	def display(self):
+		print(f'{self.name} | {self.score}')
+
+
+currency_list = [Currency('EUR', -75),
+				 Currency('USD', 25),
+				 Currency('JPY', 50),
+				 Currency('AUD', 90),
+				 Currency('CHF', 86),
+				 Currency('ZAR', -89),
+				 Currency('GBP', -45),
+				 Currency('CAD', 30)]
+
+def rank_currencies(currency_list):
+		sorted_list = sorted(currency_list, key=lambda currency: currency.score, reverse=True) # This was genuinely a brain buster new knowledge.
+		return sorted_list
+def print_rankings(currency_list):
+	ranked = rank_currencies(currency_list) # We call the function like this.
+	for score in enumerate(ranked, 1):
+		print(score)
+
+result = Currency(currency_list) # Calling is a struggle still.
+result.print_rankings(currency_list)
+
+# only 2 bugs.
