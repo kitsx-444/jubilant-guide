@@ -20,10 +20,7 @@ def rank_currencies(currency_list):
 		return sorted_list
 def print_rankings(currency_list):
 	ranked = rank_currencies(currency_list) # We call the function like this.
-	for score in enumerate(ranked, 1):
-		print(score)
+	for index, score in enumerate(ranked, 1):
+		print(score) # bug here.
 
-result = Currency(currency_list) # Calling is a struggle still.
-result.print_rankings(currency_list)
-
-# only 2 bugs.
+print_rankings(currency_list)
